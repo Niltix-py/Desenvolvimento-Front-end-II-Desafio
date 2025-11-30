@@ -1,6 +1,6 @@
 # Loja de Produtos - Desafio Front-end II
 
-## 📋 Visão Geral
+## Visão Geral
 
 Website completo com três páginas principais desenvolvido para o desafio de Desenvolvimento Front-end II.
 
