@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Usuários - Steelsig</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <a href="../index.html" class="logo">
+        <span>🛍️</span>
+        <span>Steelsig</span>
+      </a>
+      <ul>
+        <li><a href="../index.html">🏠 <span>Início</span></a></li>
+        <li><a href="users.html" class="active">👥 <span>Usuários</span></a></li>
+        <li><a href="../products/products.html">📦 <span>Produtos</span></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section>
+      <div class="container">
+        <div class="page-header">
+          <div>
+            <h1>Gerenciar Usuários</h1>
+            <p class="count">Total de usuários: <strong>0</strong></p>
+          </div>
+          <button id="toggleFormBtn" class="btn btn-accent">➕ Adicionar Usuário</button>
+        </div>
+
+        <div id="addUserFormContainer" class="form-container" style="display: none;">
+          <h2>Novo Usuário</h2>
+          <form id="addUserForm">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="nome">Nome *</label>
+                <input type="text" id="nome" placeholder="Ex: João" required>
+              </div>
+
+              <div class="form-group">
+                <label for="sobrenome">Sobrenome *</label>
+                <input type="text" id="sobrenome" placeholder="Ex: Silva" required>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" placeholder="Ex: joao@example.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="idade">Idade *</label>
+                <input type="number" id="idade" placeholder="Ex: 25" required>
+              </div>
+
+              <div class="form-group" style="grid-column: 1 / -1;">
+                <label for="foto">Foto (URL - Opcional)</label>
+                <input type="text" id="foto" placeholder="Ex: https://example.com/photo.jpg">
+              </div>
+            </div>
+
+            <div class="form-buttons">
+              <button type="submit" class="btn btn-accent">Adicionar Usuário</button>
+              <button type="button" id="cancelFormBtn" class="btn btn-secondary">Cancelar</button>
+            </div>
+          </form>
+        </div>
+
+        <div id="loading" class="loading" style="display: none;">
+          <div class="spinner"></div>
+        </div>
+
+        <div id="usersList" class="items-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 Steelsig.</p>
+    </div>
+  </footer>
+
+  <script src="../main.js"></script>
+  <script src="users.js"></script>
+</body>
+</html>
